@@ -28,11 +28,11 @@ class FederatedRecDataset:
         self.user_data_split = {}
 
      
-        self.user_category_dist = {}  # {user_id: {cat_id: count, ...}, ...}
+        self.user_category_dist = {}  
 
     
-        self.user_negatives_val = {}  # {user_id: [item_id1, item_id2, ...]}
-        self.user_negatives_test = {}  # {user_id: [item_id1, item_id2, ...]}
+        self.user_negatives_val = {}  
+        self.user_negatives_test = {}  
 
   
         self._load_data()
