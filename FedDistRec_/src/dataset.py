@@ -21,20 +21,11 @@ class FederatedRecDataset:
         self.n_items = 0
         self.n_cats = 0
 
-   
         self.user_interactions = defaultdict(list)
-    
-     
         self.user_data_split = {}
-
-     
         self.user_category_dist = {}  
-
-    
         self.user_negatives_val = {}  
         self.user_negatives_test = {}  
-
-  
         self._load_data()
         self._split_data()
         self._compute_category_distribution()
