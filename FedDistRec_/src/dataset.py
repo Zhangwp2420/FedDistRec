@@ -182,10 +182,5 @@ class UserItemRatingDataset(torch.utils.data.Dataset):
         return self.items[idx], self.ratings[idx]
 
 
-if __name__ == "__main__":
-    dataset = 'TG'
-    FD = FederatedRecDataset(dataset)
-    print(FD.top_k_sim_users[0])
-    print(FD.get_user_category_vector(0))
     for i in FD.top_k_sim_users[0]:
         print(FD.get_user_category_vector(i))
