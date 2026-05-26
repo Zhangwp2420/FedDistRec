@@ -21,20 +21,20 @@ class FederatedRecDataset:
         self.n_items = 0
         self.n_cats = 0
 
-        # User-wise data: {user_id: [(item_id, ts), ...]}
+   
         self.user_interactions = defaultdict(list)
     
-        # Final split data: {user_id: {'train': [...], 'val': [...], 'test': [...]}}
+     
         self.user_data_split = {}
 
-        # Category distribution per user (on train set)
+     
         self.user_category_dist = {}  # {user_id: {cat_id: count, ...}, ...}
 
-        # Pre-sampled negative items for evaluation
+    
         self.user_negatives_val = {}  # {user_id: [item_id1, item_id2, ...]}
         self.user_negatives_test = {}  # {user_id: [item_id1, item_id2, ...]}
 
-        # Load and process
+  
         self._load_data()
         self._split_data()
         self._compute_category_distribution()
